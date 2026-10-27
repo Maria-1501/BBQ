@@ -3,16 +3,16 @@ package objekte;
 public class Spezialisierung {
 	private int id;
 	private String bezeichnung;
-	private int fach_id;
+	private Fach fach;
 
 	public Spezialisierung() {
 	}
 
-	public Spezialisierung(int id, String bezeichnung, int fach_id) {
+	public Spezialisierung(int id, String bezeichnung, Fach fach) {
 		super();
 		this.id = id;
 		this.bezeichnung = bezeichnung;
-		this.fach_id = fach_id;
+		this.fach = fach;
 	}
 
 	public int getId() {
@@ -31,17 +31,17 @@ public class Spezialisierung {
 		this.bezeichnung = bezeichnung;
 	}
 
-	public int getFach_id() {
-		return fach_id;
+	public Fach getFach() {
+		return fach;
 	}
 
-	public void setFach_id(int fach_id) {
-		this.fach_id = fach_id;
+	public void setFach(Fach fach) {
+		this.fach = fach;
 	}
 
 	@Override
 	public String toString() {
-		return "Spezialisierung id: " + id + ", Bezeichnung = " + bezeichnung + ", Fach_id = " + fach_id;
+		return "Spezialisierung id: " + id + ", Bezeichnung = " + bezeichnung + ", Fach_id = " + fach.getId();
 	}
 
 }
